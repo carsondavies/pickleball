@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Landing: React.FC = () => {
+interface Props {
+  hideLogin: () => boolean | void;
+}
+
+const Landing: React.FC<Props> = (Props) => {
 
 
   return (
-    <div>Landing.tsx</div>
+    <div onClick={(event: React.MouseEvent<HTMLElement>) => { Props.hideLogin() }}>Landing.tsx</div>
   )
 }
 
